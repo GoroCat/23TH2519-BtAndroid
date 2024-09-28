@@ -2,6 +2,7 @@ package com.example.bt_tinhso;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,15 +25,51 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void XuLyCong(View v) {
-       findViewById(R.id.edtA);
+       EditText  editTextA = (EditText)findViewById(R.id.edtA);
+        EditText  editTextB = (EditText)findViewById(R.id.edtB);
+        String soA = editTextA.getText().toString();
+        String soB = editTextB.getText().toString();
+        float so1 = Float.parseFloat(soA);
+        float so2 = Float.parseFloat(soB);
+        float Cong = so1 + so2;
+        EditText  editTextKq= (EditText)findViewById(R.id.edtKetqua);
+        String KQ = String.valueOf(Cong);
+        editTextKq.setText(KQ);
     }
     public void XuLyTru(View v) {
-
+        EditText  editTextA = (EditText)findViewById(R.id.edtA);
+        EditText  editTextB = (EditText)findViewById(R.id.edtB);
+        String soA = editTextA.getText().toString();
+        String soB = editTextB.getText().toString();
+        float so1 = Float.parseFloat(soA);
+        float so2 = Float.parseFloat(soB);
+        float Cong = so1 - so2;
+        EditText  editTextKq= (EditText)findViewById(R.id.edtKetqua);
+        String KQ = String.valueOf(Cong);
+        editTextKq.setText(KQ);
     }
     public void XuLyNhan(View v) {
-
+        EditText  editTextA = (EditText)findViewById(R.id.edtA);
+        EditText  editTextB = (EditText)findViewById(R.id.edtB);
+        String soA = editTextA.getText().toString();
+        String soB = editTextB.getText().toString();
+        float so1 = Float.parseFloat(soA);
+        float so2 = Float.parseFloat(soB);
+        float Cong = so1 * so2;
+        EditText  editTextKq= (EditText)findViewById(R.id.edtKetqua);
+        String KQ = String.valueOf(Cong);
+        editTextKq.setText(KQ);
     }
     public void XuLyChia(View v) {
-
+        EditText  editTextA = (EditText)findViewById(R.id.edtA);
+        EditText  editTextB = (EditText)findViewById(R.id.edtB);
+        String soA = editTextA.getText().toString();
+        String soB = editTextB.getText().toString();
+        float so1 = Float.parseFloat(soA);
+        float so2 = Float.parseFloat(soB);
+        float Cong = so1 / so2;
+        EditText  editTextKq= (EditText)findViewById(R.id.edtKetqua);
+        String KQ = String.valueOf(Cong);
+        editTextKq.setText(KQ);
     }
 }
